@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Main" focusTraversable="true" prefHeight="430.0" prefWidth="588.0" style="-fx-background-color: 0,102,0;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vijay.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="-2.0" prefHeight="439.0" prefWidth="280.0" style="-fx-background-color: #0000FF;" AnchorPane.topAnchor="-2.0">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="91.0" layoutY="243.0" size="125" />
+         </children>
+         <effect>
+            <InnerShadow>
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="294.0" layoutY="18.0" prefHeight="400.0" prefWidth="280.0" style="-fx-background-color: #FFFFF0;">
+         <children>
+            <Label id="signin" fx:id="signin" alignment="CENTER" layoutX="87.0" layoutY="14.0" prefHeight="36.0" prefWidth="106.0" text="Sign In" textFill="BLUE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <JFXTextField id="user" fx:id="user" labelFloat="true" layoutX="38.0" layoutY="104.0" onAction="#LoginUser" prefHeight="37.0" prefWidth="204.0" promptText="Username">
+            
+                <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField id="pass" fx:id="pass" labelFloat="true" layoutX="38.0" layoutY="182.0" onAction="#LoginUser" prefHeight="37.0" prefWidth="204.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton id="login" fx:id="login" contentDisplay="GRAPHIC_ONLY" layoutX="106.0" layoutY="289.0" onMouseClicked="#LoginUser" prefHeight="59.0" prefWidth="52.0">
+               <graphic>
+                  <FontAwesomeIconView fill="BLUE" glyphName="CHEVRON_CIRCLE_RIGHT" onMouseClicked="#LoginUser" size="50" wrappingWidth="37.71428680419922" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="forgot" fx:id="forgot" layoutX="21.0" layoutY="245.0" prefHeight="25.0" prefWidth="133.0"    onMouseClicked="#Forgot"  text="Forgot Password ?" textFill="#68b1ea" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
